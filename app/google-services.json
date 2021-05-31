@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "780768601701",
+    "project_id": "lifestylemanagementapp-2c9f9",
+    "storage_bucket": "lifestylemanagementapp-2c9f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780768601701:android:7b48238bef201a487b088c",
+        "android_client_info": {
+          "package_name": "com.example.lifestylemanagementapp_moyank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780768601701-p4aplmtpfs0fvalvuj7qu04mlg0fg6im.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAErhYYlnuKOUOfMgfL3MHpCeND-DGzluI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780768601701-p4aplmtpfs0fvalvuj7qu04mlg0fg6im.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

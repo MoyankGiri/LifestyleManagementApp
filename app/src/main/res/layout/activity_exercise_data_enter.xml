@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExerciseDataEnter">
+
+    <AutoCompleteTextView
+        android:id="@+id/ExerciseAutoCompleteTextView"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="581dp"
+        android:hint="Enter Exercise/Activity" />
+
+    <Button
+        android:id="@+id/AddCaloriesButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="540dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="64dp"
+        android:text="ADD" />
+
+    <EditText
+        android:id="@+id/TimeEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="207dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="479dp"
+        android:ems="10"
+        android:hint="Enter time spent(in hrs)"
+        android:inputType="number" />
+
+    <com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar
+        android:id="@+id/CollapsableCalendarView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:selectedItem_textColor="@color/White"
+        app:selectedItem_background="@drawable/solidfill_blue"></com.shrikanthravi.collapsiblecalendarview.widget.CollapsibleCalendar>
+
+    <TextView
+        android:id="@+id/CalorieIntakeTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="289dp"
+        android:layout_marginBottom="149dp"
+        android:text="0.0" />
+
+    <TextView
+        android:id="@+id/CalorieBurntTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="350dp"
+        android:text="0.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="400dp"
+        android:text="Calories Intake" />
+
+    <TextView
+        android:id="@+id/CaloriesBurntTextDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="400dp"
+        android:text="Calories Burnt" />
+
+    <EditText
+        android:id="@+id/weightEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="270dp"
+        android:ems="10"
+        android:hint="Enter Weight(in lb)"
+        android:inputType="textPersonName" />
+
+</RelativeLayout>
