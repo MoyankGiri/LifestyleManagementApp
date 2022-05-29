@@ -62,7 +62,7 @@ public class ExerciseDataEnter extends AppCompatActivity {
             public void onClick(View v) {
                 if ((SelectedItem != null) && (finalDate != null) && (WeightEditText.getText().toString() != null)) {
                     Double Time = 0.0;
-                    String SelectedExerciseCalories = exerciseDatabaseHelperClass.getSpecificData(SelectedItem,WeightEditText.getText().toString());
+                    String SelectedExerciseCalories = exerciseDatabaseHelperClass.getSpecificData(SelectedItem, WeightEditText.getText().toString());
                     //Toast.makeText(EnterDetailsActivity.this, "Selected Data is : " + SelectedFoodItemFromDatabase, Toast.LENGTH_SHORT).show();
                     //System.out.println((SelectedFoodItemFromDatabase.get(0).getCalories()).replace(" cal",""));
                     String cal = SelectedExerciseCalories;
@@ -71,11 +71,10 @@ public class ExerciseDataEnter extends AppCompatActivity {
                         cal = cal.replaceAll("\\s", "");
                     }
                     Double CaloriesInItem = Double.parseDouble(cal);
-                    Log.i("Calories in item : ","" + CaloriesInItem);
+                    Log.i("Calories in item : ", "" + CaloriesInItem);
                     try {
                         Time = Double.parseDouble(TimeEditText.getText().toString());
-                    }
-                    catch (Exception e){
+                    } catch (Exception e) {
                         Toast.makeText(ExerciseDataEnter.this, "Some Error has occurred...", Toast.LENGTH_SHORT).show();
                         Time = 0.0;
                     }
@@ -85,7 +84,7 @@ public class ExerciseDataEnter extends AppCompatActivity {
                     //Toast.makeText(EnterDetailsActivity.this, "" + TotalCalories, Toast.LENGTH_SHORT).show();
 
                     if (userDataBaseHelperClass.CheckIsDataAlreadyInDBorNot("ENTRY_DATE", finalDate)) {
-                        userDataBaseHelperClass.UpdateCalorieBurntInDatabase(finalDate,CalorieBurnt);
+                        userDataBaseHelperClass.UpdateCalorieBurntInDatabase(finalDate, CalorieBurnt);
                         Toast.makeText(ExerciseDataEnter.this, "Data updated ", Toast.LENGTH_SHORT).show();
                         //System.out.println(date.getClass().getName());
                     } else {
@@ -94,15 +93,16 @@ public class ExerciseDataEnter extends AppCompatActivity {
                         Toast.makeText(ExerciseDataEnter.this, "Data added", Toast.LENGTH_SHORT).show();
                     }
                     String Todaysdate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
-                    Log.i("todays date " , Todaysdate + userDataBaseHelperClass.CheckIsDataAlreadyInDBorNot("ENTRY_DATE",Todaysdate));
-                    if(userDataBaseHelperClass.CheckIsDataAlreadyInDBorNot("ENTRY_DATE",Todaysdate)){
+                    Log.i("todays date ", Todaysdate + userDataBaseHelperClass.CheckIsDataAlreadyInDBorNot("ENTRY_DATE", Todaysdate));
+                    if (userDataBaseHelperClass.CheckIsDataAlreadyInDBorNot("ENTRY_DATE", Todaysdate)) {
                         List<UserDataBaseCustomerModel> TodaysValues = userDataBaseHelperClass.getSpecificData(Todaysdate);
                         System.out.println(TodaysValues);
                         calorieIntakeTextView.setText(TodaysValues.get(0).getCalorieIntake() + "");
                         calorieBurnttextview.setText(TodaysValues.get(0).getCalorieBurnt() + "");
                     }
 
-                } else
+                }
+                else
                     Toast.makeText(ExerciseDataEnter.this, "Please input all values and retry...", Toast.LENGTH_LONG).show();
             }
         });

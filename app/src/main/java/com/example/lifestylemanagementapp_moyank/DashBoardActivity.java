@@ -70,6 +70,13 @@ public class DashBoardActivity extends AppCompatActivity {
         });
     }
 
+    protected void onResume() {
+
+        showPieChart();
+        initPieChart();
+        super.onResume();
+    }
+
     private void showPieChart(){
 
         Double calorieIntakeValue = 0.0;
