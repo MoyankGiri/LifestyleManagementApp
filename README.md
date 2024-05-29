@@ -34,3 +34,5 @@ purpose to provide insights about the user’s lifestyle.
   1. Calorie Intake Calculation
   2. Calorie Burnt Calculation
   3. BMI calculator
+
+### For more details, please refer to the [Project Report](https://github.com/MoyankGiri/LifestyleManagementApp/blob/master/Lifestyle%20Management%20App%20Final%20Report.pdf)
